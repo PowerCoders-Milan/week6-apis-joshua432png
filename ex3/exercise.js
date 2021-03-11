@@ -28,9 +28,10 @@ function searchMovie(){
 
     document.querySelectorAll("div").forEach(element =>{
         element.remove();
-    })
-    
-    fetch(`http://www.omdbapi.com/?s=${NewTitle}&apikey=3f84f47e`)
+    }
+        )
+
+    fetch(`http://www.omdbapi.com/?s=${NewTitle}&apikey=11723a23`)
         .then(response => response.json())
         .then(data=>{
             console.log(data);
@@ -38,9 +39,9 @@ function searchMovie(){
             var main = document.createElement("div");
             var Title = document.createElement("p");
             Title.innerHTML = element.Title;
-            var year =document.createElement("p");
+            var year = document.createElement("p");
             year.innerHTML = element.Year;
-            var poster =document.createElement("img");
+            var poster = document.createElement("img");
             poster.setAttribute("src", element.Poster);
             console.log(Title);
             console.log(year);
@@ -53,7 +54,7 @@ function searchMovie(){
 })
 
 }
-  
+
 document.querySelector("input").addEventListener("keyup", searchMovie)
 
 
